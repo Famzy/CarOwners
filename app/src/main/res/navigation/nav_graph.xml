@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.carowners.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_userFilters"
+            app:destination="@id/userFilters" />
+        <action
+            android:id="@+id/action_mainActivity_to_carOwners"
+            app:destination="@id/carOwners" />
+    </activity>
+    <fragment
+        android:id="@+id/userFilters"
+        android:name="com.example.carowners.UserFilters"
+        android:label="fragment_user_filters"
+        tools:layout="@layout/fragment_user_filters" />
+    <fragment
+        android:id="@+id/carOwners"
+        android:name="com.example.carowners.CarOwners"
+        android:label="fragment_car_owners"
+        tools:layout="@layout/fragment_car_owners" />
+</navigation>
